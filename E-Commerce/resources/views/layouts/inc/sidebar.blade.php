@@ -9,22 +9,22 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active" href="./dashbord.html">
-            <a class="nav-link" href="{{ url('dashboard') }}">
-              <i class="material-icons">dashboard</i>
-              <p>Dashboard</p>
+          <li class="nav-item active" >
+            <a class="nav-link" href="{{ url('TableDeBord') }}">
+              <i class="material-icons">Tableau de Bord</i>
+              <p>Tableau de Bord</p>
             </a>
           </li>
-          <li class="nav-item" href="./dashbord.html">
-            <a class="nav-link" href="#">
-              <i class="material-icons">person</i>
-              <p>user profil</p>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('categories') }}">
+              <i class="material-icons">Categories</i>
+              <p>table Categories</p>
             </a>
           </li>
-          <li class="nav-item" href="./dashbord.html">
-            <a class="nav-link" href="#">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('ajoute-categorie')}}">
               <i class="material-icons">person</i>
-              <p>table listes</p>
+              <p>Ajouté Categories</p>
             </a>
           </li>
           <li class="nav-item" href="./dashbord.html">
