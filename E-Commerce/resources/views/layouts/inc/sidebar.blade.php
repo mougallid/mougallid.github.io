@@ -18,7 +18,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url('categories') }}">
               <i class="material-icons">Categories</i>
-              <p>table Categories</p>
+              <p>Table De Categories</p>
             </a>
           </li>
           <li class="nav-item">

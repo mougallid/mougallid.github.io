@@ -6,7 +6,7 @@
           <h4>Ajouter une Categorie </h4>
             </div>
           <div class="card-body">
-              <form action="{{url('insere-categorie')}}" method="POST" enctype="multipart/form-data">
+              <form action="{{url('insere-categorie')}}" method="POST"  enctype="multipart/form-data">
                 @csrf    
                  <div class="row">
                       <div class="col-md-6 mb-3">
@@ -42,8 +42,8 @@
                           <input type="text" class="form-control" name="meta_mot_cle">
                       </div>
                       <div class="col-md-12">
-                          <input type="file" class="form-control" name="iamge">
-                      </div>
+                        <input type="file" class="form-control" name="image">
+                    </div>
                       <div class="col-md-12">
                           <button type="submit" class="btn btn-primary">Ajouter</button>
                       </div>

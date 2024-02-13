@@ -9,8 +9,10 @@ use App\Models\Categorie;
 
 class CategorieController extends Controller
 {
+    // cette focntion à pour buit d'afficher tous le categories ds la page cataegorie sur table de beaurd
     public function index(){
-        return view('admin.categories.index');
+        $listecate = Categorie::all();
+        return view('admin.categories.index', compact('listecate'));
      }
   
      // fonction d'appelle de la formulaire de categories
@@ -21,12 +23,12 @@ class CategorieController extends Controller
      // fonction qui assure la persisatance de categorie dans la bb
     public function insere(Request $request)  {
       $categorie = new Categorie();
-      if($request->hasFile('image'))
+      if($request->hasfile('image'))
       {
        $file = $request->file('image');
        $ext = $file->getClientOriginalExtension();
        $filename = time().'.'.$ext;
-       $file->move('assets/uploads/categories/',$filename);
+       $file->move('assets/uploads/categories/', $filename);
        $categorie->image = $filename;
       }
       $categorie->nom = $request->input('nom');
