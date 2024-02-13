@@ -36,7 +36,7 @@
                         </td>
                         <td>
                             <button class="btn btn-primary">Modifier</button>
-                             <button class="btn btn-danger">Sprimer</button>
+                             <button class="btn btn-danger">Suprimer</button>
                         </td>
                      </tr>
                     @endforeach 
