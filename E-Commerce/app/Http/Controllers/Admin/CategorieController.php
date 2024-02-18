@@ -40,6 +40,43 @@ class CategorieController extends Controller
       $categorie->meta_description = $request->input('meta_description');
       $categorie->meta_mot_cle = $request->input('meta_mot_cle');
       $categorie->save();
-      return redirect('/TableDeBord')->with('status','Category added Successfully');
+      return redirect('/TableDeBord')->with('status','Catégorie est ajoutée avec succès');
+     }
+
+     // fonction qui a pour buit d'appeller le formulaire de modification d'une categorie
+     public function modifier($id){
+        $modCategorie = Categorie::find($id);
+        return view('admin.categories.modifier',compact('modCategorie'));
+     }
+
+     // fonction qui assure le changement du modification d'une categorie
+     public function changer(Request $request , $id)
+     {
+      $changCategorie = Categorie::find($id);
+      
+      if($request->hasFile('image'))
+      {
+        $path = 'assets/uploads/categories/'.$changCategorie->image;
+        if(File::exists($path))
+        {
+            File::delete($path);
+        }
+        $file = $request->file('image');
+       $ext = $file->getClientOriginalExtension();
+       $filename = time().'.'.$ext;
+       $file->move('assets/uploads/categories/', $filename);
+       $changCategorie->image = $filename;
+      }
+      $changCategorie->nom = $request->input('nom');
+      $changCategorie->slug = $request->input('slug');
+      $changCategorie->description = $request->input('description');
+      $changCategorie->statut = $request->input('statut') == TRUE ? '1':'0';
+      $changCategorie->populaire = $request->input('populaire') == TRUE ? '1':'0';
+      $changCategorie->meta_titre = $request->input('meta_titre');
+      $changCategorie->meta_description = $request->input('meta_description');
+      $changCategorie->meta_mot_cle = $request->input('meta_mot_cle');
+      $changCategorie->update();
+      return redirect('categories')->with('status','Catégorie  est mise à jour avec succès');
+        
      }
 }

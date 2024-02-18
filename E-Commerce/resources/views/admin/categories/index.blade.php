@@ -35,7 +35,7 @@
                             <img src="{{ asset('assets/uploads/categories/'.$item->image) }}" class="cate-image" alt="Image here">
                         </td>
                         <td>
-                            <button class="btn btn-primary">Modifier</button>
+                            <a href="{{ url('modifier-prod/'.$item->id) }}"><button class="btn btn-primary">Modifier</button></a>
                              <button class="btn btn-danger">Suprimer</button>
                         </td>
                      </tr>
