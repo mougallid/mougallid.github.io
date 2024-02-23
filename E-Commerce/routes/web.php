@@ -22,6 +22,7 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::post('insere-categorie','Admin\CategorieController@insere');// url pour inserer definitivement les categories  
     Route::get('modifier-prod/{id}',[CategorieController::class,'modifier']);// url d'appelle du formulaire de modification d'un categorie
     Route::put('changer-categorie/{id}',[CategorieController::class,'changer']);// url qu'assure le changement de la modification d'un categorie
+    Route::get('suprimer-categorie/{id}',[CategorieController::class, 'suprimer']);// url qui assure la suprersion d'une categorie
 
 });
  

@@ -36,7 +36,7 @@
                         </td>
                         <td>
                             <a href="{{ url('modifier-prod/'.$item->id) }}"><button class="btn btn-primary">Modifier</button></a>
-                             <button class="btn btn-danger">Suprimer</button>
+                            <a href="{{ url('suprimer-categorie/'.$item->id) }}">  <button class="btn btn-danger">Suprimer</button> </a>
                         </td>
                      </tr>
                     @endforeach 

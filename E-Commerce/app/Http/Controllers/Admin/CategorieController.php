@@ -40,7 +40,7 @@ class CategorieController extends Controller
       $categorie->meta_description = $request->input('meta_description');
       $categorie->meta_mot_cle = $request->input('meta_mot_cle');
       $categorie->save();
-      return redirect('/TableDeBord')->with('status','Catégorie est ajoutée avec succès');
+      return redirect('/categories')->with('status','Catégorie est ajoutée avec succès');
      }
 
      // fonction qui a pour buit d'appeller le formulaire de modification d'une categorie
@@ -78,5 +78,20 @@ class CategorieController extends Controller
       $changCategorie->update();
       return redirect('categories')->with('status','Catégorie  est mise à jour avec succès');
         
+     }
+
+     // fonction assurant la supression d'une categorie
+     public function suprimer($id)
+     {
+        $deleteCat = Categorie::find($id);
+        if($deleteCat->image){
+            $path = 'assets/uploads/categories/'.$deleteCat->image;
+            if(File::exists($path))
+            {
+                File::delete($path);
+            }
+        }
+        $deleteCat->delete();
+        return redirect('categories')->with('status','Catégorie  est suprmer avec succès');
      }
 }
