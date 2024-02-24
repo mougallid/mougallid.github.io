@@ -9,34 +9,34 @@
         </a></div>
       <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active" >
+          <li class="nav-item {{ Request::is('TableDeBord') ? 'active':'' }}" >
             <a class="nav-link" href="{{ url('TableDeBord') }}">
               <i class="material-icons">Tableau de Bord</i>
               <p>Tableau de Bord</p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ Request::is('categories') ? 'active': '' }} ">
             <a class="nav-link" href="{{ url('categories') }}">
               <i class="material-icons">Categories</i>
               <p>Table De Categories</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url('ajoute-categorie')}}">
-              <i class="material-icons">person</i>
+          <li class="nav-item {{Request::is('ajoute-categorie') ? 'active' : ''}} ">
+            <a class="nav-link" href="{{ url('ajoute-categorie') }}">
+              <i class="material-icons">Categorie</i>
               <p>Ajouté Categories</p>
             </a>
           </li>
-          <li class="nav-item" href="./dashbord.html">
-            <a class="nav-link" href="#">
-              <i class="material-icons">person</i>
-              <p>Products</p>
+          <li class="nav-item {{ Request::is('produits') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ url('produits') }}">
+              <i class="material-icons">Produits</i>
+              <p>Produits</p>
             </a>
           </li>
-          <li class="nav-item" href="./dashbord.html">
-            <a class="nav-link" href="#">
-              <i class="material-icons">person</i>
-              <p>Add-Products</p>
+          <li class="nav-item {{Request::is('ajoute-produit') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ url('ajoute-produit') }}">
+              <i class="material-icons">Produit</i>
+              <p>Ajouté-Produit</p>
             </a>
           </li>
         </ul>

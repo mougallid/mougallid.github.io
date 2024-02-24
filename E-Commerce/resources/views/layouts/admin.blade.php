@@ -40,6 +40,7 @@
     <script src="{{ asset('admin/js/bootstrap-material-design.min.js') }}" defer></script>
     <script src="{{ asset('admin/js/perfect-scrollbar.jquery.min.js') }}" defer></script>
 
+    <!-- ma propre lien et script pour la configuration de session -->
     <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script> 
       @if(session('status'))
          <script>
