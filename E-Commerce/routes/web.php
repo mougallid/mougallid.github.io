@@ -28,6 +28,9 @@ Route::middleware(['auth','isAdmin'])->group(function () {
 
     Route::get('produits',[ProduitController::class, 'index']);// url d'affichage de tous les produit ds le tableau de bord
     Route::get('ajoute-produit',[ProduitController::class, 'ajoute']); // url d'apple du formulaire d'ajout d'un produit 
+    Route::post('insere-produit',[ProduitController::class, 'insere']); // url qui de persistance d'un produit ds le bdd
+   
+
 });
  
  

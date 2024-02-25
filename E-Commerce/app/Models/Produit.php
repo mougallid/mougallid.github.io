@@ -12,6 +12,7 @@ class Produit extends Model
     protected $fillable = [
        'cate_id',
        'nom',
+       'slogan',
        'marque',
       'déscription',
        'prix_original',
@@ -24,4 +25,10 @@ class Produit extends Model
        'meta_mot_cle',
        'image',
     ];
+
+    // relation entre la table categorie et la table produit 
+    public function categorie()
+    {
+      return $this->belongsTo(Categorie::class, 'cate_id', 'id');    
+    }
 }

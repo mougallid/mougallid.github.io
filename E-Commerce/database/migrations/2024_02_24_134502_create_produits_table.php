@@ -17,6 +17,7 @@ class CreateProduitsTable extends Migration
             $table->id();
             $table->bigInteger('cate_id');
             $table->string('nom');
+            $table->string('slogan');
             $table->mediumText('marque');
             $table->longText('déscription');
             $table->string('prix_original');

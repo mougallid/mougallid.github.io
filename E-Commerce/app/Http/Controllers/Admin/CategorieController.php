@@ -40,7 +40,7 @@ class CategorieController extends Controller
       $categorie->meta_description = $request->input('meta_description');
       $categorie->meta_mot_cle = $request->input('meta_mot_cle');
       $categorie->save();
-      return redirect('/categories')->with('status','Catégorie est ajoutée avec succès');
+      return redirect('/categories')->with('status','La catégorie est ajoutée avec succès');
      }
 
      // fonction qui a pour buit d'appeller le formulaire de modification d'une categorie
@@ -76,7 +76,7 @@ class CategorieController extends Controller
       $changCategorie->meta_description = $request->input('meta_description');
       $changCategorie->meta_mot_cle = $request->input('meta_mot_cle');
       $changCategorie->update();
-      return redirect('categories')->with('status','Catégorie  est mise à jour avec succès');
+      return redirect('categories')->with('status','La catégorie  est mise à jour avec succès');
         
      }
 
@@ -92,6 +92,6 @@ class CategorieController extends Controller
             }
         }
         $deleteCat->delete();
-        return redirect('categories')->with('status','Catégorie  est suprmer avec succès');
+        return redirect('categories')->with('status','La catégorie  est suprmer avec succès');
      }
 }
