@@ -30,7 +30,7 @@
           <li class="nav-item {{ Request::is('produits') ? 'active' : '' }}">
             <a class="nav-link" href="{{ url('produits') }}">
               <i class="material-icons">Produits</i>
-              <p>Produits</p>
+              <p>Table De Produits</p>
             </a>
           </li>
           <li class="nav-item {{Request::is('ajoute-produit') ? 'active' : '' }}">

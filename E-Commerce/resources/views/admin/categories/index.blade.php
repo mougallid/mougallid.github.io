@@ -35,8 +35,8 @@
                             <img src="{{ asset('assets/uploads/categories/'.$item->image) }}" class="cate-image" alt="Image here">
                         </td>
                         <td>
-                            <a href="{{ url('modifier-categ/'.$item->id) }}"><button class="btn btn-primary">Modifier</button></a>
-                            <a href="{{ url('suprimer-categorie/'.$item->id) }}">  <button class="btn btn-danger">Suprimer</button> </a>
+                            <a href="{{ url('modifier-categ/'.$item->id) }}"><button class="btn btn-primary btn-sm">Modifier</button></a>
+                            <a href="{{ url('suprimer-categorie/'.$item->id) }}">  <button class="btn btn-danger btn-sm">Suprimer</button> </a>
                         </td>
                      </tr>
                     @endforeach 

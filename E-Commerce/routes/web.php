@@ -29,7 +29,10 @@ Route::middleware(['auth','isAdmin'])->group(function () {
     Route::get('produits',[ProduitController::class, 'index']);// url d'affichage de tous les produit ds le tableau de bord
     Route::get('ajoute-produit',[ProduitController::class, 'ajoute']); // url d'apple du formulaire d'ajout d'un produit 
     Route::post('insere-produit',[ProduitController::class, 'insere']); // url qui de persistance d'un produit ds le bdd
-   
+    Route::get('modifier-prod/{id}',[ProduitController::class, 'modifier']); // url d'appelle du formulaire de modification d'un produit
+    Route::put('changé-produit/{id}', [ProduitController::class, 'changer']); // url de mise à jour des produit
+    Route::get('suprimer-prod/{id}',[ProduitController::class, 'suprimer']); // url de supression d'un produit
+
 
 });
  
